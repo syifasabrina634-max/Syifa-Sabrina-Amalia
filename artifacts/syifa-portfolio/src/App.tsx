@@ -249,8 +249,11 @@ function App() {
         <div className="filters" role="group" aria-label="Filter projects">{filters.map((value) => <button key={value} className="filter-btn" aria-pressed={filter === value} onClick={() => setFilter(value)} data-testid={`filter-${value.toLowerCase().replaceAll(' ', '-')}`}>{value}</button>)}</div>
         <div className="project-grid" aria-live="polite">
           {visibleProjects.map((project, index) => <button className="project-card reveal" key={project.id} onClick={() => setSelectedProject(project)} aria-label={`Open ${project.title} project details`} data-testid={`card-project-${project.id}`}>
-            <div className="project-image"><span className="project-num">{String(projects.indexOf(project) + 1).padStart(2, '0')} / 13</span><img src={cvPage(project.page)} alt={`${project.title} real project visual from CV page ${project.page}`} loading={index > 3 ? 'lazy' : 'eager'} /><span className="project-tag">{project.category}</span></div>
-            <div className="project-card-body"><div><h3>{project.title}</h3><p>{project.label}</p></div><span className="project-open" aria-hidden="true"><ArrowUpRight size={17} /></span></div>
+            <div className="project-image"><img src={cvPage(project.page)} alt={`${project.title} real project visual from CV page ${project.page}`} loading={index > 3 ? 'lazy' : 'eager'} /></div>
+            <div className="project-card-body">
+              <div className="project-card-meta"><span className="project-num">{String(projects.indexOf(project) + 1).padStart(2, '0')} / 13</span><span className="project-tag">{project.category}</span></div>
+              <div className="project-card-main"><div><h3>{project.title}</h3><p>{project.label}</p></div><span className="project-open" aria-hidden="true"><ArrowUpRight size={17} /></span></div>
+            </div>
           </button>)}
           {visibleProjects.length === 0 && <div className="empty-filter">No projects in this category yet. Try another filter.</div>}
         </div>
