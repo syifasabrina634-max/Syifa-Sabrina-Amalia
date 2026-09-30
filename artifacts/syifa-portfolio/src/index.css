@@ -459,7 +459,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--red); outline-o
 .nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); }
 .nav-links a { color: var(--ink); text-decoration: none; font-size: 12px; letter-spacing: .07em; text-transform: uppercase; transition: color .2s; }
 .nav-links a:hover { color: var(--red); }
-.nav-cta { border: 1px solid var(--red); color: var(--paper) !important; background: var(--red); padding: 11px 17px; border-radius: 99px; }
 .menu-toggle { display: none; background: none; border: 0; color: var(--ink); padding: 8px; }
 .hero { min-height: min(780px, calc(100svh - 76px)); position: relative; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; padding: 48px clamp(24px, 9vw, 138px) 72px; isolation: isolate; }
 .hero::before { content:""; position:absolute; inset:0 0 0 51%; z-index:-1; background:var(--paper-deep); clip-path: polygon(12% 0,100% 0,100% 100%,0 100%); }
@@ -607,7 +606,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--red); outline-o
  .nav-links { display:none; position:absolute; top:65px; left:0; right:0; padding:19px 22px 22px; background:var(--paper); border-bottom:1px solid var(--line); align-items:stretch; gap:0; }
  .nav-links.open { display:flex; flex-direction:column; }
  .nav-links a { padding:13px 0; border-bottom:1px solid var(--line); }
- .nav-cta { margin-top:12px; text-align:center; }
  .hero { min-height:auto; grid-template-columns:1fr; padding:51px 25px 66px; gap:36px; }
  .hero::before { inset:46% 0 0 23%; clip-path:polygon(16% 0,100% 0,100% 100%,0 100%); }
  .hero h1 { font-size:clamp(70px,19vw,105px); margin:21px 0; }

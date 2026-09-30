@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Download, ExternalLink, Mail, Menu, MousePointer2, Phone, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink, Instagram, Mail, Menu, MousePointer2, Phone, X } from 'lucide-react';
 
 type Project = {
   id: string;
@@ -214,7 +214,7 @@ function App() {
       <header className="topbar">
         <a className="brand" href="#top" aria-label="Syifa Sabrina Amalia, back to top"><span className="brand-mark">S</span><span>SYIFA SABRINA AMALIA</span></a>
         <button className="menu-toggle" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)} data-testid="button-menu-toggle">{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
-        <nav className={`nav-links ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">{nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}<a className="nav-cta" href={asset('Syifa-Sabrina-Amalia-CV.pdf')} download>Download CV <Download size={13} /></a></nav>
+        <nav className={`nav-links ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">{nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}</nav>
       </header>
       <div id="top" />
       <section className="hero" id="main-content" aria-labelledby="hero-title">
@@ -285,7 +285,7 @@ function App() {
 
       <footer className="section contact" id="contact">
         <div className="section-kicker">Have a good question?</div><h2 className="section-heading">Let’s make the<br />next decision clearer.</h2>
-        <div className="contact-info"><a href="mailto:syifasabrina634@gmail.com"><Mail size={15} /> syifasabrina634@gmail.com <ExternalLink size={12} /></a><a href="tel:+6287874631320"><Phone size={15} /> +62 878-7463-1320</a><a href={asset('Syifa-Sabrina-Amalia-CV.pdf')} download><Download size={15} /> Download my CV</a></div>
+        <div className="contact-info"><a href="mailto:syifasabrina634@gmail.com"><Mail size={15} /> syifasabrina634@gmail.com <ExternalLink size={12} /></a><a href="tel:+6287874631320"><Phone size={15} /> +62 878-7463-1320</a><a href="https://www.instagram.com/Syifafrza_/" target="_blank" rel="noreferrer"><Instagram size={15} /> @Syifafrza_ <ExternalLink size={12} /></a></div>
         <div className="contact-foot"><span>Syifa Sabrina Amalia · BINUS Information Systems</span><span>Made with curiosity, from Indonesia</span><a href="#top" style={{ color: 'inherit', textDecoration: 'none' }}>Back to top ↑</a></div>
       </footer>
       {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} onImage={(src, alt) => setViewer({ src, alt })} />}
