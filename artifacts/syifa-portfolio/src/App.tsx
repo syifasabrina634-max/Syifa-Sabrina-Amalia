@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink, Instagram, Mail, Menu, MousePointer2, Phone, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, ExternalLink, Instagram, Linkedin, Mail, Menu, MousePointer2, Phone, X } from 'lucide-react';
 
 type Project = {
   id: string;
@@ -285,7 +285,7 @@ function App() {
 
       <footer className="section contact" id="contact">
         <div className="section-kicker">Have a good question?</div><h2 className="section-heading">Let’s make the<br />next decision clearer.</h2>
-        <div className="contact-info"><a href="mailto:syifasabrina634@gmail.com"><Mail size={15} /> syifasabrina634@gmail.com <ExternalLink size={12} /></a><a href="tel:+6287874631320"><Phone size={15} /> +62 878-7463-1320</a><a href="https://www.instagram.com/Syifafrza_/" target="_blank" rel="noreferrer"><Instagram size={15} /> @Syifafrza_ <ExternalLink size={12} /></a></div>
+        <div className="contact-info"><a href="mailto:syifasabrina634@gmail.com"><Mail size={15} /> syifasabrina634@gmail.com <ExternalLink size={12} /></a><a href="tel:+6287874631320"><Phone size={15} /> +62 878-7463-1320</a><a href="https://www.instagram.com/Syifafrza_/" target="_blank" rel="noreferrer"><Instagram size={15} /> @Syifafrza_ <ExternalLink size={12} /></a><a href="https://www.linkedin.com/in/syifasabrinaamalia" target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn <ExternalLink size={12} /></a></div>
         <div className="contact-foot"><span>Syifa Sabrina Amalia · BINUS Information Systems</span><span>Made with curiosity, from Indonesia</span><a href="#top" style={{ color: 'inherit', textDecoration: 'none' }}>Back to top ↑</a></div>
       </footer>
       {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} onImage={(src, alt) => setViewer({ src, alt })} />}
